@@ -71,6 +71,7 @@ $(document).ready(function() {
     $.ajax({
       url: requestUrl + '/?taskId=' + taskId,
       method: 'DELETE',
+	  crossDomain: true,
       success: function() {
         parentEl.slideUp(400, function() { parentEl.remove(); });
       }
