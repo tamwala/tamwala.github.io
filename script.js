@@ -36,7 +36,7 @@ $(document).ready(function() {
   }
 
   function prepareBoardOrListSelectOptions(availableChoices) {
-    return availableChoices.map(function(choice) {
+    return availableChoices?.map(function(choice) {
       return $('<option>')
           .addClass('crud-select__option')
           .val(choice.id)
