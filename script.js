@@ -12,7 +12,7 @@ $(document).ready(function() {
   getAllTasks();
 
   function getAllAvailableBoards(callback, callbackArgs) {
-    var requestUrl = trelloApiRoot + '/boards?fields=name,id&lists=all&badges=all';
+    var requestUrl = trelloApiRoot + '/boards';
 
     $.ajax({
       url: requestUrl,
@@ -36,7 +36,7 @@ $(document).ready(function() {
   }
 
   function prepareBoardOrListSelectOptions(availableChoices) {
-    return availableChoices?.map(function(choice) {
+    return availableChoices.map(function(choice) {
       return $('<option>')
           .addClass('crud-select__option')
           .val(choice.id)
